@@ -1,0 +1,16 @@
+n = int(input())
+friend = {}
+
+for person in range(n):
+    name, phone = input().split()
+    friend[name] = phone
+
+while True:
+    try:
+        query = input()
+        if query in friend.keys():
+            print("{}={}".format(query, friend[query]))
+        else:
+            print("Not found")
+    except EOFError:
+        break
